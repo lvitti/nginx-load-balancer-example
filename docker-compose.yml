@@ -1,7 +1,10 @@
 services:
   helloworld:
-    image: strm/helloworld-http
+    image: traefik/whoami
     hostname: helloworld
+    command: 
+      - --verbose
+    
   nginx:
     image: nginx:latest
     volumes:
